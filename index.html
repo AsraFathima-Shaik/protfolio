@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Asra Fathima | Portfolio</title>
+
+    <!-- Contact Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f2;
+            color: #292525;
+        }
+
+
+        /* Navigation */
+
+        nav {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        nav h2 {
+            margin: 0;
+            color: #754c45;
+            font-size: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 22px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #a66a5c;
+        }
+
+
+        /* Home */
+
+        .home {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 10%;
+            gap: 50px;
+        }
+
+        .home-text {
+            max-width: 600px;
+        }
+
+        .small-text {
+            color: #a66a5c;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .home h1 {
+            font-size: 55px;
+            margin: 5px 0;
+            color: #332b29;
+        }
+
+        .home h1 span {
+            color: #a66a5c;
+        }
+
+        .home h3 {
+            font-size: 23px;
+            font-weight: normal;
+            color: #655957;
+        }
+
+        .home p {
+            line-height: 1.8;
+            color: #625b59;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 22px;
+            background-color: #754c45;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .button:hover {
+            background-color: #a66a5c;
+        }
+
+
+        /* Profile */
+
+        .profile-box {
+            width: 290px;
+            height: 290px;
+            border-radius: 50%;
+            background-color: #eadbd5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 8px solid white;
+            box-shadow: 0 5px 25px rgba(80,50,40,0.15);
+        }
+
+        .profile-box span {
+            font-size: 80px;
+            color: #754c45;
+            font-weight: bold;
+        }
+
+
+        /* Common Sections */
+
+        section {
+            padding: 70px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #754c45;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+
+        /* About */
+
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.9;
+            color: #5e5755;
+        }
+
+
+        /* Skills */
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background-color: white;
+            width: 180px;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .skill i {
+            font-size: 30px;
+            color: #a66a5c;
+            margin-bottom: 10px;
+        }
+
+        .skill h3 {
+            color: #754c45;
+            margin-bottom: 8px;
+        }
+
+        .skill p {
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* Projects */
+
+        .projects {
+            background-color: #eee7e3;
+        }
+
+        .project-container {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            background-color: white;
+            width: 300px;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .project-number {
+            color: #a66a5c;
+            font-size: 14px;
+        }
+
+        .project h3 {
+            color: #754c45;
+        }
+
+        .project p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .project span {
+            display: inline-block;
+            background-color: #f1e4df;
+            color: #754c45;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin: 3px;
+        }
+
+
+        /* Education */
+
+        .education {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .education-box {
+            background-color: white;
+            padding: 22px;
+            margin-bottom: 18px;
+            border-left: 5px solid #a66a5c;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .education-box h3 {
+            margin: 0 0 8px;
+            color: #754c45;
+        }
+
+        .education-box p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+
+        /* Contact */
+
+        .contact {
+            background-color: #754c45;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #eadbd5;
+        }
+
+        .contact-details {
+            max-width: 650px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: left;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item i {
+            width: 35px;
+            font-size: 23px;
+            color: #a66a5c;
+            text-align: center;
+        }
+
+        .contact-item h4 {
+            margin: 0 0 5px;
+            color: #754c45;
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: #666;
+        }
+
+        .contact-item a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #a66a5c;
+            text-decoration: underline;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background-color: #3b2c29;
+            color: #ddd;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .home h1 {
+                font-size: 40px;
+            }
+
+            .profile-box {
+                width: 220px;
+                height: 220px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+
+            .contact-details {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- Navigation -->
+
+<nav>
+
+    
+
+    <div>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#education">Education</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- Home -->
+
+<section class="home" id="home">
+
+    <div class="home-text">
+
+        <p class="small-text">Hello, I'm</p>
+
+        <h1>Asra <span>Fathima</span></h1>
+
+        <h3>ECE Graduate & Aspiring Software Developer</h3>
+
+        <p>
+            I am a B.Tech Electronics and Communication Engineering
+            graduate who enjoys learning technology, building simple
+            projects and improving my programming skills.
+        </p>
+
+        <a href="#projects" class="button">
+            View My Work
+        </a>
+
+    </div>
+
+
+    <div class="profile-box">
+
+        <span>AF</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- About -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+
+        <h2>About Me</h2>
+
+        <p>A little about my journey</p>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p>
+            I recently completed my B.Tech in Electronics and Communication
+            Engineering. During my academic journey, I developed an
+            interest in programming and web development.
+        </p>
+
+        <p>
+            I enjoy learning by creating projects rather than only
+            studying theory. I am currently focusing on strengthening
+            my programming, problem-solving and web development skills.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- Skills -->
+
+<section id="skills">
+
+    <div class="section-title">
+
+        <h2>My Skills</h2>
+
+        <p>Technologies and tools I have worked with</p>
+
+    </div>
+
+
+    <div class="skills-container">
+
+
+        <div class="skill">
+
+            <i class="fa-brands fa-html5"></i>
+
+            <h3>HTML</h3>
+
+            <p>Web Page Structure</p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            <h3>CSS</h3>
+
+            <p>Web Page Styling</p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <i class="fa-brands fa-python"></i>
+
+            <h3>Python</h3>
+
+            <p>Basic Programming</p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <i class="fa-brands fa-java"></i>
+
+            <h3>Java</h3>
+
+            <p>Learning & Practice</p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>SQL</h3>
+
+            <p>Basic Database Concepts</p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <i class="fa-solid fa-microchip"></i>
+
+            <h3>CST</h3>
+
+            <p>Electromagnetic Simulation</p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- Projects -->
+
+<section class="projects" id="projects">
+
+    <div class="section-title">
+
+        <h2>My Projects</h2>
+
+        <p>Some of the projects I have worked on</p>
+
+    </div>
+
+
+    <div class="project-container">
+
+
+        <div class="project">
+
+            <p class="project-number">01 — WEB DEVELOPMENT</p>
+
+            <h3>The Lenin House</h3>
+
+            <p>
+                A simple retail website developed during my web
+                development internship using HTML, CSS and Django.
+            </p>
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Django</span>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <p class="project-number">02 — PYTHON</p>
+
+            <h3>Retail Billing System</h3>
+
+            <p>
+                A desktop billing application created using Python
+                and Tkinter for generating customer bills.
+            </p>
+
+            <span>Python</span>
+            <span>Tkinter</span>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <p class="project-number">03 — ECE PROJECT</p>
+
+            <h3>FSS Metasurface Absorber</h3>
+
+            <p>
+                A final year project involving the design and simulation
+                of a frequency selective surface absorber using CST Studio.
+            </p>
+
+            <span>CST Studio</span>
+            <span>FSS</span>
+            <span>Microwave</span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- Education -->
+
+<section id="education">
+
+    <div class="section-title">
+
+        <h2>Education</h2>
+
+        <p>My academic journey</p>
+
+    </div>
+
+
+    <div class="education">
+
+
+        <div class="education-box">
+
+            <h3>B.Tech – Electronics & Communication Engineering</h3>
+
+            <p>KSRM College of Engineering</p>
+
+            <p>CGPA: 8.71 / 10</p>
+
+        </div>
+
+
+        <div class="education-box">
+
+            <h3>Intermediate – MPC</h3>
+
+            <p>Completed Intermediate Education</p>
+
+        </div>
+
+
+        <div class="education-box">
+
+            <h3>SSC</h3>
+
+            <p>Completed Secondary School Education</p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            Feel free to contact me for opportunities,
+            projects or professional connections.
+        </p>
+
+    </div>
+
+
+    <div class="contact-details">
+
+
+        <!-- Gmail -->
+
+        <div class="contact-item">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <div>
+
+                <h4>Email</h4>
+
+                <p>
+
+                    <a href="mailto:asrafathima9059@gmail.com">
+
+                        asrafathima9059@gmail.com
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Phone -->
+
+        <div class="contact-item">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <div>
+
+                <h4>Phone</h4>
+
+                <p>
+
+                    <a href="tel:+919059313415">
+
+                        +91 90xxxxxxxx
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Location -->
+
+        <div class="contact-item">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <div>
+
+                <h4>Location</h4>
+
+                <p>Bangalore, Karnataka, India</p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LinkedIn -->
+
+        <div class="contact-item">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <div>
+
+                <h4>LinkedIn</h4>
+
+                <p>
+
+                    <a href="https://www.linkedin.com/in/shaik-asra-fathima-?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        View my LinkedIn profile
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GitHub -->
+
+        <div class="contact-item">
+
+            <i class="fa-brands fa-github"></i>
+
+            <div>
+
+                <h4>GitHub</h4>
+
+                <p>
+
+                    <a href="https://github.com/AsraFathima-Shaik"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        View my GitHub profile
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer>
+
+    <p>© 2026 Asra Fathima | Personal Portfolio</p>
+
+</footer>
+
+
+</body>
+
+</html>
